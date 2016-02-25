@@ -1,0 +1,12 @@
+# RxSwift
+github "ReactiveX/RxSwift" ~> 2.0
+# Bond
+github "SwiftBond/Bond" ~> 4.0
+# Then
+github "devxoul/Then" ~> 1.0
+# Alamofire
+github "Alamofire/Alamofire" ~> 3.0
+# Himotoki
+github "ikesyo/Himotoki" ~> 1.5
+# SVProgressHUD
+github "SVProgressHUD/SVProgressHUD"
