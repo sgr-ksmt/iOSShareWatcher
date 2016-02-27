@@ -11,4 +11,6 @@ github "ikesyo/Himotoki" ~> 1.5
 # SVProgressHUD
 github "SVProgressHUD/SVProgressHUD"
 # AsyncKit
-"mishimay/AsyncKit"
+github "mishimay/AsyncKit"
+# Reaml
+github "realm/realm-cocoa"
