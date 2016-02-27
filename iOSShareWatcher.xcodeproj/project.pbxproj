@@ -19,9 +19,10 @@
 		4D34A0391C7EF4DA00FF7A80 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0301C7EF4DA00FF7A80 /* RxBlocking.framework */; };
 		4D34A03A1C7EF4DA00FF7A80 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0311C7EF4DA00FF7A80 /* RxCocoa.framework */; };
 		4D34A03B1C7EF4DA00FF7A80 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0321C7EF4DA00FF7A80 /* RxSwift.framework */; };
-		4D34A03C1C7EF4DA00FF7A80 /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0331C7EF4DA00FF7A80 /* RxTests.framework */; };
 		4D34A03D1C7EF4DA00FF7A80 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0341C7EF4DA00FF7A80 /* SVProgressHUD.framework */; };
 		4D34A03E1C7EF4DA00FF7A80 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0351C7EF4DA00FF7A80 /* Then.framework */; };
+		4DA0F8C71C806BCE002A8C23 /* iOSShareDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0F8C61C806BCE002A8C23 /* iOSShareDataRequest.swift */; };
+		4DA0F8C91C808978002A8C23 /* AsyncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA0F8C81C808978002A8C23 /* AsyncKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4D34A0331C7EF4DA00FF7A80 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
 		4D34A0341C7EF4DA00FF7A80 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		4D34A0351C7EF4DA00FF7A80 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		4DA0F8C61C806BCE002A8C23 /* iOSShareDataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequest.swift; sourceTree = "<group>"; };
+		4DA0F8C81C808978002A8C23 /* AsyncKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncKit.framework; path = Carthage/Build/iOS/AsyncKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +64,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA0F8C91C808978002A8C23 /* AsyncKit.framework in Frameworks */,
 				4D34A0361C7EF4DA00FF7A80 /* Alamofire.framework in Frameworks */,
 				4D34A0371C7EF4DA00FF7A80 /* Bond.framework in Frameworks */,
 				4D34A0381C7EF4DA00FF7A80 /* Himotoki.framework in Frameworks */,
 				4D34A0391C7EF4DA00FF7A80 /* RxBlocking.framework in Frameworks */,
 				4D34A03A1C7EF4DA00FF7A80 /* RxCocoa.framework in Frameworks */,
 				4D34A03B1C7EF4DA00FF7A80 /* RxSwift.framework in Frameworks */,
-				4D34A03C1C7EF4DA00FF7A80 /* RxTests.framework in Frameworks */,
 				4D34A03D1C7EF4DA00FF7A80 /* SVProgressHUD.framework in Frameworks */,
 				4D34A03E1C7EF4DA00FF7A80 /* Then.framework in Frameworks */,
 			);
@@ -105,6 +108,7 @@
 		4D34A00C1C7EF48100FF7A80 /* iOSShareWatcher */ = {
 			isa = PBXGroup;
 			children = (
+				4DA0F8C01C806B91002A8C23 /* Classes */,
 				4D34A00D1C7EF48100FF7A80 /* AppDelegate.swift */,
 				4D34A00F1C7EF48100FF7A80 /* ViewController.swift */,
 				4D34A0111C7EF48100FF7A80 /* Main.storyboard */,
@@ -127,6 +131,7 @@
 		4D34A03F1C7EF4E200FF7A80 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DA0F8C81C808978002A8C23 /* AsyncKit.framework */,
 				4D34A02D1C7EF4DA00FF7A80 /* Alamofire.framework */,
 				4D34A02E1C7EF4DA00FF7A80 /* Bond.framework */,
 				4D34A02F1C7EF4DA00FF7A80 /* Himotoki.framework */,
@@ -138,6 +143,54 @@
 				4D34A0351C7EF4DA00FF7A80 /* Then.framework */,
 			);
 			name = frameworks;
+			sourceTree = "<group>";
+		};
+		4DA0F8C01C806B91002A8C23 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0F8C11C806B91002A8C23 /* API */,
+				4DA0F8C21C806B91002A8C23 /* Controller */,
+				4DA0F8C31C806B91002A8C23 /* Model */,
+				4DA0F8C41C806B91002A8C23 /* View */,
+				4DA0F8C51C806B91002A8C23 /* ViewModel */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4DA0F8C11C806B91002A8C23 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0F8C61C806BCE002A8C23 /* iOSShareDataRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4DA0F8C21C806B91002A8C23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4DA0F8C31C806B91002A8C23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DA0F8C41C806B91002A8C23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DA0F8C51C806B91002A8C23 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +304,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AsyncKit.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -266,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA0F8C71C806BCE002A8C23 /* iOSShareDataRequest.swift in Sources */,
 				4D34A0101C7EF48100FF7A80 /* ViewController.swift in Sources */,
 				4D34A00E1C7EF48100FF7A80 /* AppDelegate.swift in Sources */,
 			);

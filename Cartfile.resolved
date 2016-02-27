@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "3.2.0"
+github "sgr-ksmt/AsyncKit" "abad8b16ca872dfd887e2cceb9a42a5f9e8ecbaa"
 github "SwiftBond/Bond" "v4.3.0"
 github "ikesyo/Himotoki" "1.5.0"
 github "ReactiveX/RxSwift" "2.2.0"

@@ -10,3 +10,5 @@ github "Alamofire/Alamofire" ~> 3.0
 github "ikesyo/Himotoki" ~> 1.5
 # SVProgressHUD
 github "SVProgressHUD/SVProgressHUD"
+# AsyncKit
+"mishimay/AsyncKit"

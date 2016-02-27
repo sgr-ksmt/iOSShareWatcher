@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
+    let bag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
+        iOSShareDataRequest().fetch().subscribeNext{print($0)}.addDisposableTo(bag)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
