@@ -10,10 +10,11 @@ import Foundation
 import RxSwift
 import Alamofire
 import AsyncKit
+import Himotoki
 
-class iOSShareDataRequest {
+struct iOSShareDataRequest {
     
-    func fetchChartData() -> Observable<String> {
+    static func fetchChartData() -> Observable<String> {
         return Observable<String>.create { observer in
             Alamofire.request(.GET, "https://developer.apple.com/support/includes/ios-chart/scripts/chart.js").responseString {
                 switch $0.result {
@@ -28,7 +29,15 @@ class iOSShareDataRequest {
         }
     }
     
-    func fetchDate() -> Observable<String> {
+    static private func parseChartData(code: String) -> Observable<String> {
+        return Observable<String>.create { observer in
+            observer.onNext("HogeHoge")
+            observer.onCompleted()
+            return AnonymousDisposable{}
+        }
+    }
+    
+    static func fetchDate() -> Observable<String> {
         return Observable<String>.create { observer in
             Alamofire.request(.GET, "https://developer.apple.com/support/app-store/").responseString {
                 switch $0.result {
@@ -43,9 +52,9 @@ class iOSShareDataRequest {
         }
     }
     
-    func fetchData() -> Observable<[String]> {
+    static func fetchData() -> Observable<[String]> {
         
-        return Observable.zip(fetchChartData(), fetchDate()) {
+        return Observable.zip(fetchChartData().flatMap { parseChartData($0) }, fetchDate()) {
             return [$0,$1]
         }
     }

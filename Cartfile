@@ -14,3 +14,7 @@ github "SVProgressHUD/SVProgressHUD"
 github "mishimay/AsyncKit"
 # Reaml
 github "realm/realm-cocoa"
+# UIColor+Hex
+github "yeahdongcn/UIColor-Hex-Swift" >= 1.9
+# regex
+github "cezheng/PySwiftyRegex" ~> 0.2.0

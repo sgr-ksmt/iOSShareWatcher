@@ -7,22 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A231C8192D900364C75 /* Alamofire.framework */; };
+		4D2E2A311C8192D900364C75 /* AsyncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A241C8192D900364C75 /* AsyncKit.framework */; };
+		4D2E2A321C8192D900364C75 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A251C8192D900364C75 /* Bond.framework */; };
+		4D2E2A331C8192D900364C75 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A261C8192D900364C75 /* HEXColor.framework */; };
+		4D2E2A341C8192D900364C75 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A271C8192D900364C75 /* Himotoki.framework */; };
+		4D2E2A351C8192D900364C75 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A281C8192D900364C75 /* Realm.framework */; };
+		4D2E2A361C8192D900364C75 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A291C8192D900364C75 /* RealmSwift.framework */; };
+		4D2E2A371C8192D900364C75 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2A1C8192D900364C75 /* RxBlocking.framework */; };
+		4D2E2A381C8192D900364C75 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2B1C8192D900364C75 /* RxCocoa.framework */; };
+		4D2E2A391C8192D900364C75 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2C1C8192D900364C75 /* RxSwift.framework */; };
+		4D2E2A3B1C8192D900364C75 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2E1C8192D900364C75 /* SVProgressHUD.framework */; };
+		4D2E2A3C1C8192D900364C75 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2F1C8192D900364C75 /* Then.framework */; };
+		4D2E2A401C81981700364C75 /* ChartDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E2A3F1C81981700364C75 /* ChartDataParser.swift */; };
 		4D34A00E1C7EF48100FF7A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34A00D1C7EF48100FF7A80 /* AppDelegate.swift */; };
 		4D34A0101C7EF48100FF7A80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34A00F1C7EF48100FF7A80 /* ViewController.swift */; };
 		4D34A0131C7EF48100FF7A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0111C7EF48100FF7A80 /* Main.storyboard */; };
 		4D34A0151C7EF48100FF7A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0141C7EF48100FF7A80 /* Assets.xcassets */; };
 		4D34A0181C7EF48100FF7A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0161C7EF48100FF7A80 /* LaunchScreen.storyboard */; };
 		4D34A0231C7EF48100FF7A80 /* iOSShareWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */; };
-		4D34A0361C7EF4DA00FF7A80 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A02D1C7EF4DA00FF7A80 /* Alamofire.framework */; };
-		4D34A0371C7EF4DA00FF7A80 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A02E1C7EF4DA00FF7A80 /* Bond.framework */; };
-		4D34A0381C7EF4DA00FF7A80 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A02F1C7EF4DA00FF7A80 /* Himotoki.framework */; };
-		4D34A0391C7EF4DA00FF7A80 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0301C7EF4DA00FF7A80 /* RxBlocking.framework */; };
-		4D34A03A1C7EF4DA00FF7A80 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0311C7EF4DA00FF7A80 /* RxCocoa.framework */; };
-		4D34A03B1C7EF4DA00FF7A80 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0321C7EF4DA00FF7A80 /* RxSwift.framework */; };
-		4D34A03D1C7EF4DA00FF7A80 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0341C7EF4DA00FF7A80 /* SVProgressHUD.framework */; };
-		4D34A03E1C7EF4DA00FF7A80 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D34A0351C7EF4DA00FF7A80 /* Then.framework */; };
+		4D900B971C818929004034C2 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D900B961C818929004034C2 /* ChartData.swift */; };
 		4DA0F8C71C806BCE002A8C23 /* iOSShareDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0F8C61C806BCE002A8C23 /* iOSShareDataRequest.swift */; };
-		4DA0F8C91C808978002A8C23 /* AsyncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA0F8C81C808978002A8C23 /* AsyncKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D2E2A231C8192D900364C75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		4D2E2A241C8192D900364C75 /* AsyncKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncKit.framework; path = Carthage/Build/iOS/AsyncKit.framework; sourceTree = "<group>"; };
+		4D2E2A251C8192D900364C75 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		4D2E2A261C8192D900364C75 /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
+		4D2E2A271C8192D900364C75 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		4D2E2A281C8192D900364C75 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		4D2E2A291C8192D900364C75 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		4D2E2A2A1C8192D900364C75 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		4D2E2A2B1C8192D900364C75 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		4D2E2A2C1C8192D900364C75 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		4D2E2A2D1C8192D900364C75 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
+		4D2E2A2E1C8192D900364C75 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		4D2E2A2F1C8192D900364C75 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		4D2E2A3F1C81981700364C75 /* ChartDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataParser.swift; sourceTree = "<group>"; };
 		4D34A00A1C7EF48100FF7A80 /* iOSShareWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSShareWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D34A00D1C7EF48100FF7A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D34A00F1C7EF48100FF7A80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,17 +65,8 @@
 		4D34A01E1C7EF48100FF7A80 /* iOSShareWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSShareWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSShareWatcherTests.swift; sourceTree = "<group>"; };
 		4D34A0241C7EF48100FF7A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D34A02D1C7EF4DA00FF7A80 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		4D34A02E1C7EF4DA00FF7A80 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
-		4D34A02F1C7EF4DA00FF7A80 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
-		4D34A0301C7EF4DA00FF7A80 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
-		4D34A0311C7EF4DA00FF7A80 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		4D34A0321C7EF4DA00FF7A80 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		4D34A0331C7EF4DA00FF7A80 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/iOS/RxTests.framework; sourceTree = "<group>"; };
-		4D34A0341C7EF4DA00FF7A80 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
-		4D34A0351C7EF4DA00FF7A80 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		4D900B961C818929004034C2 /* ChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		4DA0F8C61C806BCE002A8C23 /* iOSShareDataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequest.swift; sourceTree = "<group>"; };
-		4DA0F8C81C808978002A8C23 /* AsyncKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncKit.framework; path = Carthage/Build/iOS/AsyncKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +74,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA0F8C91C808978002A8C23 /* AsyncKit.framework in Frameworks */,
-				4D34A0361C7EF4DA00FF7A80 /* Alamofire.framework in Frameworks */,
-				4D34A0371C7EF4DA00FF7A80 /* Bond.framework in Frameworks */,
-				4D34A0381C7EF4DA00FF7A80 /* Himotoki.framework in Frameworks */,
-				4D34A0391C7EF4DA00FF7A80 /* RxBlocking.framework in Frameworks */,
-				4D34A03A1C7EF4DA00FF7A80 /* RxCocoa.framework in Frameworks */,
-				4D34A03B1C7EF4DA00FF7A80 /* RxSwift.framework in Frameworks */,
-				4D34A03D1C7EF4DA00FF7A80 /* SVProgressHUD.framework in Frameworks */,
-				4D34A03E1C7EF4DA00FF7A80 /* Then.framework in Frameworks */,
+				4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */,
+				4D2E2A311C8192D900364C75 /* AsyncKit.framework in Frameworks */,
+				4D2E2A321C8192D900364C75 /* Bond.framework in Frameworks */,
+				4D2E2A331C8192D900364C75 /* HEXColor.framework in Frameworks */,
+				4D2E2A341C8192D900364C75 /* Himotoki.framework in Frameworks */,
+				4D2E2A351C8192D900364C75 /* Realm.framework in Frameworks */,
+				4D2E2A361C8192D900364C75 /* RealmSwift.framework in Frameworks */,
+				4D2E2A371C8192D900364C75 /* RxBlocking.framework in Frameworks */,
+				4D2E2A381C8192D900364C75 /* RxCocoa.framework in Frameworks */,
+				4D2E2A391C8192D900364C75 /* RxSwift.framework in Frameworks */,
+				4D2E2A3B1C8192D900364C75 /* SVProgressHUD.framework in Frameworks */,
+				4D2E2A3C1C8192D900364C75 /* Then.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +99,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2E2A3D1C8192DC00364C75 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E2A231C8192D900364C75 /* Alamofire.framework */,
+				4D2E2A241C8192D900364C75 /* AsyncKit.framework */,
+				4D2E2A251C8192D900364C75 /* Bond.framework */,
+				4D2E2A261C8192D900364C75 /* HEXColor.framework */,
+				4D2E2A271C8192D900364C75 /* Himotoki.framework */,
+				4D2E2A281C8192D900364C75 /* Realm.framework */,
+				4D2E2A291C8192D900364C75 /* RealmSwift.framework */,
+				4D2E2A2A1C8192D900364C75 /* RxBlocking.framework */,
+				4D2E2A2B1C8192D900364C75 /* RxCocoa.framework */,
+				4D2E2A2C1C8192D900364C75 /* RxSwift.framework */,
+				4D2E2A2D1C8192D900364C75 /* RxTests.framework */,
+				4D2E2A2E1C8192D900364C75 /* SVProgressHUD.framework */,
+				4D2E2A2F1C8192D900364C75 /* Then.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		4D2E2A3E1C81980700364C75 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E2A3F1C81981700364C75 /* ChartDataParser.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		4D34A0011C7EF48100FF7A80 = {
 			isa = PBXGroup;
 			children = (
-				4D34A03F1C7EF4E200FF7A80 /* frameworks */,
+				4D2E2A3D1C8192DC00364C75 /* frameworks */,
 				4D34A00C1C7EF48100FF7A80 /* iOSShareWatcher */,
 				4D34A0211C7EF48100FF7A80 /* iOSShareWatcherTests */,
 				4D34A00B1C7EF48100FF7A80 /* Products */,
@@ -128,26 +169,10 @@
 			path = iOSShareWatcherTests;
 			sourceTree = "<group>";
 		};
-		4D34A03F1C7EF4E200FF7A80 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4DA0F8C81C808978002A8C23 /* AsyncKit.framework */,
-				4D34A02D1C7EF4DA00FF7A80 /* Alamofire.framework */,
-				4D34A02E1C7EF4DA00FF7A80 /* Bond.framework */,
-				4D34A02F1C7EF4DA00FF7A80 /* Himotoki.framework */,
-				4D34A0301C7EF4DA00FF7A80 /* RxBlocking.framework */,
-				4D34A0311C7EF4DA00FF7A80 /* RxCocoa.framework */,
-				4D34A0321C7EF4DA00FF7A80 /* RxSwift.framework */,
-				4D34A0331C7EF4DA00FF7A80 /* RxTests.framework */,
-				4D34A0341C7EF4DA00FF7A80 /* SVProgressHUD.framework */,
-				4D34A0351C7EF4DA00FF7A80 /* Then.framework */,
-			);
-			name = frameworks;
-			sourceTree = "<group>";
-		};
 		4DA0F8C01C806B91002A8C23 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E2A3E1C81980700364C75 /* Helper */,
 				4DA0F8C11C806B91002A8C23 /* API */,
 				4DA0F8C21C806B91002A8C23 /* Controller */,
 				4DA0F8C31C806B91002A8C23 /* Model */,
@@ -175,6 +200,7 @@
 		4DA0F8C31C806B91002A8C23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D900B961C818929004034C2 /* ChartData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +331,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AsyncKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -322,7 +351,9 @@
 			files = (
 				4DA0F8C71C806BCE002A8C23 /* iOSShareDataRequest.swift in Sources */,
 				4D34A0101C7EF48100FF7A80 /* ViewController.swift in Sources */,
+				4D900B971C818929004034C2 /* ChartData.swift in Sources */,
 				4D34A00E1C7EF48100FF7A80 /* AppDelegate.swift in Sources */,
+				4D2E2A401C81981700364C75 /* ChartDataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
