@@ -14,6 +14,8 @@ import Himotoki
 
 struct iOSShareDataRequest {
     
+    private static let baseURL = "https://developer.apple.com/support"
+    
     static func fetchChartData() -> Observable<String> {
         return Observable<String>.create { observer in
             Alamofire.request(.GET, "https://developer.apple.com/support/includes/ios-chart/scripts/chart.js").responseString {
@@ -25,7 +27,7 @@ struct iOSShareDataRequest {
                     observer.onError(error)
                 }
             }
-            return AnonymousDisposable{}
+            return AnonymousDisposable {}
         }
     }
     
@@ -33,7 +35,7 @@ struct iOSShareDataRequest {
         return Observable<String>.create { observer in
             observer.onNext("HogeHoge")
             observer.onCompleted()
-            return AnonymousDisposable{}
+            return AnonymousDisposable {}
         }
     }
     
@@ -48,14 +50,14 @@ struct iOSShareDataRequest {
                     observer.onError(error)
                 }
             }
-            return AnonymousDisposable{}
+            return AnonymousDisposable {}
         }
     }
     
     static func fetchData() -> Observable<[String]> {
-        
-        return Observable.zip(fetchChartData().flatMap { parseChartData($0) }, fetchDate()) {
-            return [$0,$1]
+        return Observable
+            .zip(fetchChartData().flatMap({ parseChartData($0) }), fetchDate()) {
+                return [$0, $1]
         }
     }
 }
