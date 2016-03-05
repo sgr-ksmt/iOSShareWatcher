@@ -10,13 +10,19 @@ import UIKit
 import RealmSwift
 import Himotoki
 import HEXColor
+import Then
 
-struct ChartData {
+struct ChartData: Decodable {
     var date: NSDate?
     var elements: [ChartElement]?
+    static func decode(e: Extractor) throws -> ChartData {
+        var d = ChartData()
+        d.elements = try e <|| "elements"
+        return d
+    }
 }
 
-struct ChartElement: Decodable {
+struct ChartElement: Decodable, Then {
 
     let name: String
     let value: Int
