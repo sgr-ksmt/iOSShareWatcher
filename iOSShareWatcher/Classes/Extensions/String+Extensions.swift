@@ -51,7 +51,7 @@ extension String {
     }
     
     var range: NSRange {
-        return NSMakeRange(0, length)
+        return NSRange(location: 0, length: length)
     }
     
     func stringByAppendingPathComponent(path: String) -> String {
