@@ -14,28 +14,31 @@ import Then
 
 struct ChartData: Decodable {
     var date: NSDate?
-    var elements: [ChartElement]?
+    let elements: [ChartElement]
+    
+    init(elements: [ChartElement]) {
+        self.elements = elements
+    }
     static func decode(e: Extractor) throws -> ChartData {
-        var d = ChartData()
-        d.elements = try e <|| "elements"
-        return d
+        return try ChartData(elements: e <|| "elements")
     }
 }
 
 struct ChartElement: Decodable, Then {
-
     let name: String
     let value: Int
-    private let colorHex: String
-    var color: UIColor {
-        return UIColor(rgba: colorHex)
+    let color: UIColor
+    
+    private static func convertColor(@autoclosure decoder: () throws -> String) rethrows -> UIColor {
+        let hex = try decoder()
+        return UIColor(rgba: hex)
     }
 
     static func decode(e: Extractor) throws -> ChartElement {
         return try ChartElement(
             name: e <| "name",
             value: e <| "value",
-            colorHex: e <| "color"
+            color: convertColor(e <| "color")
         )
     }
 }

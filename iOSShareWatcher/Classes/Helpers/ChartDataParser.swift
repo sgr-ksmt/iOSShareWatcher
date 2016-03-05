@@ -12,8 +12,9 @@ import UIKit
 struct ChartDataParser {
     private init() {}
     
-    static func parse(code: String) throws -> [String: AnyObject] {
+    static func parse(code: String) -> [String: AnyObject] {
         // mock
+//        return [:]
         return [
             "elements": [
                 ["name": "iOS 9", "value": 77, "color": "#79cdf8", "x": -20, "y": -20],
