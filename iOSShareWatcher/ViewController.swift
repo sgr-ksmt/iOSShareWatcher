@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SVProgressHUD
+import Async
 
 class ViewController: UIViewController {
 
@@ -27,12 +28,13 @@ class ViewController: UIViewController {
         viewModel.loading
             .asObservable()
             .subscribeNext { visible in
-                dispatch_async(dispatch_get_main_queue()) {
+                Async.main {
                     if visible {
                         SVProgressHUD.showWithStatus("loading")
                     } else {
                         SVProgressHUD.dismiss()
                     }
+                    
                 }
             }
             .addDisposableTo(disposeBag)
