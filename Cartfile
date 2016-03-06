@@ -1,7 +1,5 @@
 # RxSwift
 github "ReactiveX/RxSwift" ~> 2.0
-# Bond
-github "SwiftBond/Bond" ~> 4.0
 # Then
 github "devxoul/Then" ~> 1.0
 # Alamofire
@@ -18,3 +16,6 @@ github "realm/realm-cocoa"
 github "yeahdongcn/UIColor-Hex-Swift" >= 1.9
 # regex
 github "cezheng/PySwiftyRegex" ~> 0.2.0
+# Testing
+github "Quick/Quick"
+github "Quick/Nimble"
