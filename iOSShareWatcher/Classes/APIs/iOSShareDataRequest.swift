@@ -12,6 +12,8 @@ import Alamofire
 import AsyncKit
 import Himotoki
 
+import SVProgressHUD
+
 struct iOSShareDataRequest {
     
     private static let baseURL = "https://developer.apple.com/support"

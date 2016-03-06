@@ -8,15 +8,34 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
-    let bag = DisposeBag()
+    let disposeBag = DisposeBag()
+    let viewModel = MainViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        iOSShareDataRequest.fetchData().subscribeNext({
-            print($0)
-        }).addDisposableTo(bag)
+        
+        rx_sentMessage(Selector("viewWillAppear:"))
+            .map { _ in () }
+            .bindTo(viewModel.refreshTrigger)
+            .addDisposableTo(disposeBag)
+
+        viewModel.loading
+            .asObservable()
+            .subscribeNext { visible in
+                dispatch_async(dispatch_get_main_queue()) {
+                    if visible {
+                        SVProgressHUD.showWithStatus("loading")
+                    } else {
+                        SVProgressHUD.dismiss()
+                    }
+                }
+            }
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,3 +43,4 @@ class ViewController: UIViewController {
     }
     
 }
+

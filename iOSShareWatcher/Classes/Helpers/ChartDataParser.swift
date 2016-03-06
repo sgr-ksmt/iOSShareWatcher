@@ -21,7 +21,6 @@ struct ChartDataParser {
         return "{\"elements\":" + replaced + "}"
     }
     static func parse(code: String) -> Himotoki.AnyJSON {
-        print(code)
         if let
             m = re.compile(".*var newData = (.+)").search(code),
             text = m.group(1),

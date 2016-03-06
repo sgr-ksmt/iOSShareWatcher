@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D1457CE1C8C362800C9A9EE /* PySwiftyRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */; };
+		4D1457D01C8C611400C9A9EE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */; };
 		4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A231C8192D900364C75 /* Alamofire.framework */; };
 		4D2E2A311C8192D900364C75 /* AsyncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A241C8192D900364C75 /* AsyncKit.framework */; };
 		4D2E2A331C8192D900364C75 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A261C8192D900364C75 /* HEXColor.framework */; };
@@ -45,6 +46,7 @@
 		4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PySwiftyRegex.framework; path = Carthage/Build/iOS/PySwiftyRegex.framework; sourceTree = "<group>"; };
+		4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4D2E2A231C8192D900364C75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4D2E2A241C8192D900364C75 /* AsyncKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncKit.framework; path = Carthage/Build/iOS/AsyncKit.framework; sourceTree = "<group>"; };
 		4D2E2A261C8192D900364C75 /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		4D934D3F1C8AAA8C00575399 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1457D01C8C611400C9A9EE /* MainViewModel.swift in Sources */,
 				4D934D411C8AAA8C00575399 /* iOSShareDataRequest.swift in Sources */,
 				4D934D431C8AAA8C00575399 /* ChartData.swift in Sources */,
 				4D934D421C8AAA8C00575399 /* ChartDataParser.swift in Sources */,
