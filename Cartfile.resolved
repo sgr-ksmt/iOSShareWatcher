@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "3.2.1"
+github "duemunk/Async" "1.7.2"
 github "mishimay/AsyncKit" "1.2.1"
 github "ikesyo/Himotoki" "1.6.0"
 github "Quick/Nimble" "v3.1.0"
