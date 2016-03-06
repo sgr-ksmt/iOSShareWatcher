@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1457CB1C8C2BFD00C9A9EE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */; };
+		4D1457CC1C8C2BFD00C9A9EE /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */; };
 		4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A231C8192D900364C75 /* Alamofire.framework */; };
 		4D2E2A311C8192D900364C75 /* AsyncKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A241C8192D900364C75 /* AsyncKit.framework */; };
-		4D2E2A321C8192D900364C75 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A251C8192D900364C75 /* Bond.framework */; };
 		4D2E2A331C8192D900364C75 /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A261C8192D900364C75 /* HEXColor.framework */; };
 		4D2E2A341C8192D900364C75 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A271C8192D900364C75 /* Himotoki.framework */; };
 		4D2E2A351C8192D900364C75 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A281C8192D900364C75 /* Realm.framework */; };
@@ -42,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4D2E2A231C8192D900364C75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4D2E2A241C8192D900364C75 /* AsyncKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncKit.framework; path = Carthage/Build/iOS/AsyncKit.framework; sourceTree = "<group>"; };
-		4D2E2A251C8192D900364C75 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
 		4D2E2A261C8192D900364C75 /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
 		4D2E2A271C8192D900364C75 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		4D2E2A281C8192D900364C75 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -76,9 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1457CB1C8C2BFD00C9A9EE /* Nimble.framework in Frameworks */,
+				4D1457CC1C8C2BFD00C9A9EE /* Quick.framework in Frameworks */,
 				4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */,
 				4D2E2A311C8192D900364C75 /* AsyncKit.framework in Frameworks */,
-				4D2E2A321C8192D900364C75 /* Bond.framework in Frameworks */,
 				4D2E2A331C8192D900364C75 /* HEXColor.framework in Frameworks */,
 				4D2E2A341C8192D900364C75 /* Himotoki.framework in Frameworks */,
 				4D2E2A351C8192D900364C75 /* Realm.framework in Frameworks */,
@@ -106,7 +109,6 @@
 			children = (
 				4D2E2A231C8192D900364C75 /* Alamofire.framework */,
 				4D2E2A241C8192D900364C75 /* AsyncKit.framework */,
-				4D2E2A251C8192D900364C75 /* Bond.framework */,
 				4D2E2A261C8192D900364C75 /* HEXColor.framework */,
 				4D2E2A271C8192D900364C75 /* Himotoki.framework */,
 				4D2E2A281C8192D900364C75 /* Realm.framework */,
@@ -124,6 +126,8 @@
 		4D34A0011C7EF48100FF7A80 = {
 			isa = PBXGroup;
 			children = (
+				4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */,
+				4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */,
 				4D2E2A3D1C8192DC00364C75 /* frameworks */,
 				4D34A00C1C7EF48100FF7A80 /* iOSShareWatcher */,
 				4D34A0211C7EF48100FF7A80 /* iOSShareWatcherTests */,
@@ -335,7 +339,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Bond.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
@@ -346,6 +349,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			name = Carthage;
 			outputPaths = (

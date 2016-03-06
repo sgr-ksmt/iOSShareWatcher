@@ -38,18 +38,18 @@ struct iOSShareDataRequest {
             .flatMap(decodeChartData)
     }
     
-    static private func parseChartData(code: String) -> Observable<[String: AnyObject]> {
-        return Observable<[String: AnyObject]>.create { observer in
+    static private func parseChartData(code: String) -> Observable<Himotoki.AnyJSON> {
+        return Observable<Himotoki.AnyJSON>.create { observer in
             observer.onNext(ChartDataParser.parse(code))
             observer.onCompleted()
             return AnonymousDisposable {}
         }
     }
     
-    static private func decodeChartData(json: [String: AnyObject]) -> Observable<ChartData> {
+    static private func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
         return Observable<ChartData>.create { observer in
             do {
-                let chartData: ChartData = try decode(json)
+                let chartData: ChartData = try decodeValue(json)
                 observer.onNext(chartData)
                 observer.onCompleted()
             } catch let error {
