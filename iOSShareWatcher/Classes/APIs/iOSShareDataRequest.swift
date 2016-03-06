@@ -15,12 +15,18 @@ import Himotoki
 struct iOSShareDataRequest {
     
     private static let baseURL = "https://developer.apple.com/support"
+    private static var chartJSURL: String {
+        return baseURL.stringByAppendingPathComponent("includes/ios-chart/scripts/chart.js")
+    }
+    private static var appStoreURL: String {
+        return baseURL.stringByAppendingPathComponent("app-store")
+    }
     
     static func fetchChartData() -> Observable<ChartData> {
         return Observable<String>
             .create { observer in
                 let request = Alamofire
-                    .request(.GET, baseURL.stringByAppendingPathComponent("includes/ios-chart/scripts/chart.js"))
+                    .request(.GET, chartJSURL)
                     .responseString {
                         switch $0.result {
                         case .Success(let code):
@@ -62,7 +68,7 @@ struct iOSShareDataRequest {
     static func fetchUpdatedDate() -> Observable<String> {
         return Observable<String>.create { observer in
             let request = Alamofire
-                .request(.GET, baseURL.stringByAppendingPathComponent("app-store"))
+                .request(.GET, appStoreURL)
                 .responseString {
                     switch $0.result {
                     case .Success(let code):

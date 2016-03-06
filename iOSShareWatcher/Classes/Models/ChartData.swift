@@ -29,16 +29,15 @@ struct ChartElement: Decodable, Then {
     let value: Int
     let color: UIColor
     
-    private static func convertColor(@autoclosure decoder: () throws -> String) rethrows -> UIColor {
-        let hex = try decoder()
-        return UIColor(rgba: hex)
+    private static var colorTransformer: Transformer<String, UIColor> {
+        return Transformer { return try UIColor(rgba_throws: $0) }
     }
-
+    
     static func decode(e: Extractor) throws -> ChartElement {
         return try ChartElement(
             name: e <| "name",
             value: e <| "value",
-            color: convertColor(e <| "color")
+            color: colorTransformer.apply(e <| "color")
         )
     }
 }

@@ -8,19 +8,28 @@
 
 import Foundation
 import UIKit
+import PySwiftyRegex
+import Himotoki
 
 struct ChartDataParser {
     private init() {}
-    
-    static func parse(code: String) -> [String: AnyObject] {
-        // mock
-//        return [:]
-        return [
-            "elements": [
-                ["name": "iOS 9", "value": 77, "color": "#79cdf8", "x": -20, "y": -20],
-                ["name": "iOS 8", "value": 17, "color": "#b3e1fb"],
-                ["name": "Earlier", "value": 6, "color": "#c1e8fb", "y":-10]
-            ]
-        ]
+    static func formatToJSON(text: String) -> String {
+        let replaced = re
+            .compile("(name|value|color|x|y).?:")
+            .sub("\"$1\":", text)
+        
+        return "{\"elements\":" + replaced + "}"
+    }
+    static func parse(code: String) -> Himotoki.AnyJSON {
+        print(code)
+        if let
+            m = re.compile(".*var newData = (.+)").search(code),
+            text = m.group(1),
+            json = formatToJSON(text).dataUsingEncoding(NSUTF8StringEncoding),
+            elements = try? NSJSONSerialization.JSONObjectWithData(json, options: .AllowFragments) {
+                return elements
+        } else {
+            return [:]
+        }
     }
 }
