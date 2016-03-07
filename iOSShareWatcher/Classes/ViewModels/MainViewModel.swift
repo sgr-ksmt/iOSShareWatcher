@@ -25,11 +25,16 @@ class MainViewModel {
             .shareReplay(1)
         
         //TODO: change
-        let requestFinish = request.flatMap({_ in Observable.just() })
+        let requestFinishTrigger = PublishSubject<Void>()        
+        request
+            .subscribe { _ in
+                requestFinishTrigger.onCompleted()
+            }
+            .addDisposableTo(disposeBag)
         
         Observable.of(
             Observable.of(true).sample(refreshTrigger),
-            Observable.of(false).sample(requestFinish)
+            Observable.of(false).sample(requestFinishTrigger)
         )
         .merge()
         .bindTo(loading)
@@ -37,7 +42,13 @@ class MainViewModel {
         
         
         request
-            .subscribeNext({print($0)})
+            .subscribe({ (event) -> Void in
+                switch event {
+                case .Next(let elements): print("elements :", elements)
+                case .Error(let error): print("error :", error)
+                default: ()
+                }
+            })
             .addDisposableTo(disposeBag)
     }
 }
