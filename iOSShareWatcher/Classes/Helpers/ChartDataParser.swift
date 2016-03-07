@@ -20,7 +20,7 @@ struct ChartDataParser {
         
         return "{\"elements\":" + replaced + "}"
     }
-    static func parse(code: String) -> Himotoki.AnyJSON {
+    static func parseElements(code: String) throws -> Himotoki.AnyJSON {
         if let
             m = re.compile(".*var newData = (.+)").search(code),
             text = m.group(1),
@@ -30,5 +30,9 @@ struct ChartDataParser {
         } else {
             return [:]
         }
+    }
+    
+    static func parseDate(code: String) throws -> NSDate {
+        return NSDate()
     }
 }

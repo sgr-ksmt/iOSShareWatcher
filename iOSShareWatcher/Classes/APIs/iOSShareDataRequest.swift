@@ -18,44 +18,53 @@ struct iOSShareDataRequest {
     
     private static let baseURL = "https://developer.apple.com/support"
     private static var chartJSURL: String {
-        return baseURL.stringByAppendingPathComponent("includes/ios-chart/scripts/chart.js")
+        return baseURL + "/includes/ios-chart/scripts/chart.js"
     }
     private static var appStoreURL: String {
-        return baseURL.stringByAppendingPathComponent("app-store")
+        return baseURL + "/app-store"
     }
     
     static func fetchChartData() -> Observable<ChartData> {
-        return Observable<String>
-            .create { observer in
-                let request = Alamofire
-                    .request(.GET, chartJSURL)
-                    .responseString {
-                        switch $0.result {
-                        case .Success(let code):
-                            observer.onNext(code)
-                            observer.onCompleted()
-                        case .Failure(let error):
-                            observer.onError(error)
-                        }
-                }
-                return AnonymousDisposable {
-                    request.cancel()
-                }
-            }
+        return Observable.just()
+            .flatMap(getChartJS)
             .flatMap(parseChartData)
             .flatMap(decodeChartData)
     }
+
+    private static func getChartJS() -> Observable<String> {
+        return Observable.create { observer in
+            let request = Alamofire
+                .request(.GET, chartJSURL)
+                .responseString {
+                    switch $0.result {
+                    case .Success(let code):
+                        observer.onNext(code)
+                        observer.onCompleted()
+                    case .Failure(let error):
+                        observer.onError(error)
+                    }
+            }
+            return AnonymousDisposable {
+                request.cancel()
+            }
+        }
+    }
     
-    static private func parseChartData(code: String) -> Observable<Himotoki.AnyJSON> {
-        return Observable<Himotoki.AnyJSON>.create { observer in
-            observer.onNext(ChartDataParser.parse(code))
-            observer.onCompleted()
+    private static func parseChartData(code: String) -> Observable<Himotoki.AnyJSON> {
+        return Observable.create { observer in
+            do {
+                let json = try ChartDataParser.parseElements(code)
+                observer.onNext(json)
+                observer.onCompleted()
+            } catch let error {
+                observer.onError(error)
+            }
             return AnonymousDisposable {}
         }
     }
     
-    static private func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
-        return Observable<ChartData>.create { observer in
+    private static func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
+        return Observable.create { observer in
             do {
                 let chartData: ChartData = try decodeValue(json)
                 observer.onNext(chartData)
@@ -67,8 +76,14 @@ struct iOSShareDataRequest {
         }
     }
     
-    static func fetchUpdatedDate() -> Observable<String> {
-        return Observable<String>.create { observer in
+    static func fetchUpdatedDate() -> Observable<NSDate> {
+        return Observable.just()
+            .flatMap(getHTML)
+            .flatMap(parseDate)
+    }
+    
+    private static func getHTML() -> Observable<String> {
+        return Observable.create { observer in
             let request = Alamofire
                 .request(.GET, appStoreURL)
                 .responseString {
@@ -86,10 +101,24 @@ struct iOSShareDataRequest {
         }
     }
     
-    static func fetchData() -> Observable<[String]> {
-        return Observable
-            .zip(fetchChartData(), fetchUpdatedDate()) { _ in
-                return [""]
+    private static func parseDate(code: String) -> Observable<NSDate> {
+        return Observable.create { observer in
+            do {
+                let date = try ChartDataParser.parseDate(code)
+                observer.onNext(date)
+                observer.onCompleted()
+            } catch let error {
+                observer.onError(error)
+            }
+            return AnonymousDisposable {}
+        }
+    }
+    
+    static func fetchData() -> Observable<ChartData> {
+        return Observable.zip(fetchChartData(), fetchUpdatedDate()) {
+            var chartData = $0
+            chartData.date = $1
+            return chartData
         }
     }
 }
