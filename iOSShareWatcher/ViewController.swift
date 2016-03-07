@@ -24,25 +24,35 @@ class ViewController: UIViewController {
             .map { _ in () }
             .bindTo(viewModel.refreshTrigger)
             .addDisposableTo(disposeBag)
-
-        viewModel.loading
-            .asObservable()
-            .subscribeNext { visible in
+        
+        viewModel.indicatorTrigger
+            .subscribe { event in
                 Async.main {
-                    if visible {
-                        SVProgressHUD.showWithStatus("loading")
-                    } else {
-                        SVProgressHUD.dismiss()
-                    }
-                    
+                    SVProgressHUD.rx_switch("Loading...", event: event)
                 }
-            }
-            .addDisposableTo(disposeBag)
+            }.addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+}
+
+extension SVProgressHUD {
+    
+    static func rx_switch(msg: String, errorMsg: String = "Error!", event: Event<Bool>) {
+        switch event {
+        case .Next(let visible):
+            if visible {
+                SVProgressHUD.showWithStatus(msg)
+            } else {
+                SVProgressHUD.dismiss()
+            }
+        case .Error( _):
+            SVProgressHUD.showErrorWithStatus(errorMsg)
+        default: ()
+        }
+    }
 }
 

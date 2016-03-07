@@ -12,6 +12,7 @@ import PySwiftyRegex
 import Himotoki
 import Then
 
+//TODO: move to suswiftsugar or extensions
 extension NSLocale {
     enum Type: String {
         case en_US_POSIX
@@ -40,7 +41,6 @@ struct ChartDataParser {
         let replaced = re
             .compile("(name|value|color|x|y).?:")
             .sub("\"$1\":", text)
-        
         return "{\"elements\":" + replaced + "}"
     }
     static func parseElements(code: String) throws -> Himotoki.AnyJSON {
@@ -63,7 +63,6 @@ struct ChartDataParser {
     }
     
     static func parseDate(code: String) throws -> NSDate {
-        // <p class="footnote">As measured by the App Store on <span class="nowrap">February 22, 2016.</span></p>
         guard let
             matches = re.compile(".*As measured by the App Store on <.*>(.+)\\..*").search(code),
             dateStr = matches.group(1) else {
@@ -71,7 +70,6 @@ struct ChartDataParser {
         }
         let formatter = NSDateFormatter().then {
             $0.dateFormat = "MMMM dd, yyyy"
-//            NSLocale(localeIdentifier: "en_US_POSIX")
             $0.locale = NSLocale(type: .en_US_POSIX)
         }
         print(formatter.stringFromDate(NSDate()))
