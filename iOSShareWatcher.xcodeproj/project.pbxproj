@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D14021F1C8D984E00063336 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */; };
+		4D1402201C8D985200063336 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */; };
+		4D1402211C8D985500063336 /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2D1C8192D900364C75 /* RxTests.framework */; };
 		4D1457CE1C8C362800C9A9EE /* PySwiftyRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */; };
 		4D1457D01C8C611400C9A9EE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */; };
 		4D1457D21C8C799700C9A9EE /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457D11C8C799700C9A9EE /* Async.framework */; };
@@ -102,6 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1402211C8D985500063336 /* RxTests.framework in Frameworks */,
+				4D14021F1C8D984E00063336 /* Nimble.framework in Frameworks */,
+				4D1402201C8D985200063336 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,7 @@
 		4D2E2A3D1C8192DC00364C75 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D1457D11C8C799700C9A9EE /* Async.framework */,
 				4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */,
 				4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */,
 				4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */,
@@ -133,7 +140,6 @@
 		4D34A0011C7EF48100FF7A80 = {
 			isa = PBXGroup;
 			children = (
-				4D1457D11C8C799700C9A9EE /* Async.framework */,
 				4D2E2A3D1C8192DC00364C75 /* frameworks */,
 				4D34A00C1C7EF48100FF7A80 /* iOSShareWatcher */,
 				4D34A0211C7EF48100FF7A80 /* iOSShareWatcherTests */,
@@ -270,6 +276,7 @@
 				4D34A01A1C7EF48100FF7A80 /* Sources */,
 				4D34A01B1C7EF48100FF7A80 /* Frameworks */,
 				4D34A01C1C7EF48100FF7A80 /* Resources */,
+				4D1402221C8D987C00063336 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -339,6 +346,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4D1402221C8D987C00063336 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTests.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		4D34A0401C7EF4F600FF7A80 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,6 +576,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSShareWatcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.sgr-ksmt.iOSShareWatcherTests";
@@ -564,6 +592,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSShareWatcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.sgr-ksmt.iOSShareWatcherTests";

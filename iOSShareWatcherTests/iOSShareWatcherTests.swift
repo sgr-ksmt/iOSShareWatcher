@@ -6,31 +6,24 @@
 //
 //
 
-import XCTest
+import Quick
+import Nimble
 @testable import iOSShareWatcher
 
-class iOSShareWatcherTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+class Spec: QuickSpec {
+    override func spec() {
+        describe("describe text") {
+            context("context text1") {
+                it("it text") {
+                    expect(1).to(beGreaterThanOrEqualTo(1))
+                }
+            }
+            context("context text2") {
+                it("it text") {
+                    expect(2).to(beGreaterThanOrEqualTo(1))
+                }
+            }
+
         }
     }
-    
 }
