@@ -72,7 +72,6 @@ struct ChartDataParser {
             $0.dateFormat = "MMMM dd, yyyy"
             $0.locale = NSLocale(type: .en_US_POSIX)
         }
-        print(formatter.stringFromDate(NSDate()))
         if let date = formatter.dateFromString(dateStr) {
             return date
         } else {

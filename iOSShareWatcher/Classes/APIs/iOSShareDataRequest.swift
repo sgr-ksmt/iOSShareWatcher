@@ -16,15 +16,15 @@ import SVProgressHUD
 
 struct iOSShareDataRequest {
     
-    private static let baseURL = "https://developer.apple.com/support"
-    private static var chartJSURL: String {
+    static let baseURL = "https://developer.apple.com/support"
+    static var chartJSURL: String {
         return baseURL + "/includes/ios-chart/scripts/chart.js"
     }
-    private static var appStoreURL: String {
+    static var appStoreURL: String {
         return baseURL + "/app-store"
     }
     
-    static func fetchChartData() -> Observable<ChartData> {
+    static func fetchChartData() -> Observable<[ChartElement]> {
         return Observable.just()
             .flatMap(getChartJS)
             .flatMap(parseChartData)
@@ -63,11 +63,11 @@ struct iOSShareDataRequest {
         }
     }
     
-    static func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
+    static func decodeChartData(json: Himotoki.AnyJSON) -> Observable<[ChartElement]> {
         return Observable.create { observer in
             do {
-                let chartData: ChartData = try decodeValue(json)
-                observer.onNext(chartData)
+                let elements: [ChartElement] = try decodeArray(json, rootKeyPath: "elements")
+                observer.onNext(elements)
                 observer.onCompleted()
             } catch let error {
                 observer.onError(error)
@@ -116,9 +116,7 @@ struct iOSShareDataRequest {
     
     static func fetchData() -> Observable<ChartData> {
         return Observable.zip(fetchChartData(), fetchUpdatedDate()) {
-            var chartData = $0
-            chartData.date = $1
-            return chartData
+            return ChartData(date: $1, elements: $0)
         }
     }
 }

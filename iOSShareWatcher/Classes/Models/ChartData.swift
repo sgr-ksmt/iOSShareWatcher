@@ -12,16 +12,9 @@ import Himotoki
 import HEXColor
 import Then
 
-struct ChartData: Decodable {
+struct ChartData {
     var date: NSDate?
     let elements: [ChartElement]
-    
-    init(elements: [ChartElement]) {
-        self.elements = elements
-    }
-    static func decode(e: Extractor) throws -> ChartData {
-        return try ChartData(elements: e <|| "elements")
-    }
 }
 
 struct ChartElement: Decodable, Then {

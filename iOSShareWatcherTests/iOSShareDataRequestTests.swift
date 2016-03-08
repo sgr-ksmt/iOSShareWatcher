@@ -11,7 +11,7 @@ import XCTest
 import Quick
 import Nimble
 import RxSwift
-import RxTests
+import Kagee
 @testable import iOSShareWatcher
 
 class iOSShareDataRequestSpec: QuickSpec {
@@ -20,7 +20,7 @@ class iOSShareDataRequestSpec: QuickSpec {
         describe("fetchChartData") {
             context("do decode chartData from json") {
                 it("should success") {
-                    let disposebag = DisposeBag()
+                    let disposeBag = DisposeBag()
                     let json = [
                         "elements" : [
                             [ "name": "iOS 9", "value": 77, "color": "#79cdf8", "x": -20, "y": -20],
@@ -30,14 +30,17 @@ class iOSShareDataRequestSpec: QuickSpec {
                     ]
                     iOSShareDataRequest
                         .decodeChartData(json)
-                        .shareReplay(1)
                         .subscribe {
                             switch $0 {
-                            case .Error(let error): fail("\(error)")
+                            case .Next(let elements):
+                                expect(elements.count).to(equal(3))
+                                expect(elements.first?.value).to(equal(77))
+                            case .Error(let error):
+                                fail("\(error)")
                             default: ()
                             }
                         }
-                        .addDisposableTo(disposebag)
+                        .addDisposableTo(disposeBag)
                 }
             }
         }

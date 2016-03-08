@@ -58,7 +58,7 @@ class MainViewModel {
                 case .Next(let elements):
                     print("elements :", elements)
                 case .Error(let error):
-                    print("error :", error)
+//                    print("error :", error)
                     loadErrorTrigger.onError(error)
                 default: ()
                 }
