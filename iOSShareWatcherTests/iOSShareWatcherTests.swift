@@ -6,11 +6,8 @@
 //
 //
 
-import Quick
-import Nimble
+import XCTest
 @testable import iOSShareWatcher
 
-class Spec: QuickSpec {
-    override func spec() {
-    }
+class Test: XCTestCase {
 }

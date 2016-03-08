@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D14021F1C8D984E00063336 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */; };
-		4D1402201C8D985200063336 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */; };
 		4D1402211C8D985500063336 /* RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E2A2D1C8192D900364C75 /* RxTests.framework */; };
 		4D1457CE1C8C362800C9A9EE /* PySwiftyRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */; };
 		4D1457D01C8C611400C9A9EE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */; };
@@ -30,8 +28,7 @@
 		4D34A0151C7EF48100FF7A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0141C7EF48100FF7A80 /* Assets.xcassets */; };
 		4D34A0181C7EF48100FF7A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0161C7EF48100FF7A80 /* LaunchScreen.storyboard */; };
 		4D34A0231C7EF48100FF7A80 /* iOSShareWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */; };
-		4D42D2C71C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */; };
-		4D42D2C91C8EBE7500B84AE9 /* Kagee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D42D2C81C8EBE7500B84AE9 /* Kagee.framework */; };
+		4D3C38311C8EEDCD00A66CB6 /* Kagee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D42D2C81C8EBE7500B84AE9 /* Kagee.framework */; };
 		4D934D411C8AAA8C00575399 /* iOSShareDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D381C8AAA8C00575399 /* iOSShareDataRequest.swift */; };
 		4D934D421C8AAA8C00575399 /* ChartDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D3C1C8AAA8C00575399 /* ChartDataParser.swift */; };
 		4D934D431C8AAA8C00575399 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D3E1C8AAA8C00575399 /* ChartData.swift */; };
@@ -49,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PySwiftyRegex.framework; path = Carthage/Build/iOS/PySwiftyRegex.framework; sourceTree = "<group>"; };
 		4D1457CF1C8C611400C9A9EE /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4D1457D11C8C799700C9A9EE /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = Carthage/Build/iOS/Async.framework; sourceTree = "<group>"; };
@@ -76,7 +71,6 @@
 		4D34A01E1C7EF48100FF7A80 /* iOSShareWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSShareWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSShareWatcherTests.swift; sourceTree = "<group>"; };
 		4D34A0241C7EF48100FF7A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequestTests.swift; sourceTree = "<group>"; };
 		4D42D2C81C8EBE7500B84AE9 /* Kagee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kagee.framework; path = Carthage/Build/iOS/Kagee.framework; sourceTree = "<group>"; };
 		4D934D381C8AAA8C00575399 /* iOSShareDataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequest.swift; sourceTree = "<group>"; };
 		4D934D3C1C8AAA8C00575399 /* ChartDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataParser.swift; sourceTree = "<group>"; };
@@ -89,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3C38311C8EEDCD00A66CB6 /* Kagee.framework in Frameworks */,
 				4D1457D21C8C799700C9A9EE /* Async.framework in Frameworks */,
 				4D1457CE1C8C362800C9A9EE /* PySwiftyRegex.framework in Frameworks */,
 				4D2E2A301C8192D900364C75 /* Alamofire.framework in Frameworks */,
@@ -109,10 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D42D2C91C8EBE7500B84AE9 /* Kagee.framework in Frameworks */,
 				4D1402211C8D985500063336 /* RxTests.framework in Frameworks */,
-				4D14021F1C8D984E00063336 /* Nimble.framework in Frameworks */,
-				4D1402201C8D985200063336 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +114,9 @@
 		4D2E2A3D1C8192DC00364C75 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D42D2C81C8EBE7500B84AE9 /* Kagee.framework */,
 				4D1457D11C8C799700C9A9EE /* Async.framework */,
 				4D1457CD1C8C362800C9A9EE /* PySwiftyRegex.framework */,
-				4D1457C91C8C2BFD00C9A9EE /* Nimble.framework */,
-				4D1457CA1C8C2BFD00C9A9EE /* Quick.framework */,
 				4D2E2A231C8192D900364C75 /* Alamofire.framework */,
 				4D2E2A241C8192D900364C75 /* AsyncKit.framework */,
 				4D2E2A261C8192D900364C75 /* HEXColor.framework */,
@@ -145,7 +136,6 @@
 		4D34A0011C7EF48100FF7A80 = {
 			isa = PBXGroup;
 			children = (
-				4D42D2C81C8EBE7500B84AE9 /* Kagee.framework */,
 				4D2E2A3D1C8192DC00364C75 /* frameworks */,
 				4D34A00C1C7EF48100FF7A80 /* iOSShareWatcher */,
 				4D34A0211C7EF48100FF7A80 /* iOSShareWatcherTests */,
@@ -180,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */,
-				4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */,
 				4D34A0241C7EF48100FF7A80 /* Info.plist */,
 			);
 			path = iOSShareWatcherTests;
@@ -387,8 +376,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PySwiftyRegex.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Async.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kagee.framework",
@@ -438,7 +425,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D34A0231C7EF48100FF7A80 /* iOSShareWatcherTests.swift in Sources */,
-				4D42D2C71C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

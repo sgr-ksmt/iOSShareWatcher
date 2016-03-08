@@ -47,11 +47,11 @@ extension SVProgressHUD {
             if visible {
                 SVProgressHUD.showWithStatus(msg)
             } else {
-                SVProgressHUD.dismiss()
             }
         case .Error( _):
             SVProgressHUD.showErrorWithStatus(errorMsg)
-        default: ()
+        default:
+            SVProgressHUD.dismiss()
         }
     }
 }
