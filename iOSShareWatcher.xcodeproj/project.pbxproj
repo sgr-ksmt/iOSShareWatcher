@@ -30,6 +30,7 @@
 		4D34A0151C7EF48100FF7A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0141C7EF48100FF7A80 /* Assets.xcassets */; };
 		4D34A0181C7EF48100FF7A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D34A0161C7EF48100FF7A80 /* LaunchScreen.storyboard */; };
 		4D34A0231C7EF48100FF7A80 /* iOSShareWatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */; };
+		4D42D2C71C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */; };
 		4D934D411C8AAA8C00575399 /* iOSShareDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D381C8AAA8C00575399 /* iOSShareDataRequest.swift */; };
 		4D934D421C8AAA8C00575399 /* ChartDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D3C1C8AAA8C00575399 /* ChartDataParser.swift */; };
 		4D934D431C8AAA8C00575399 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D934D3E1C8AAA8C00575399 /* ChartData.swift */; };
@@ -74,6 +75,7 @@
 		4D34A01E1C7EF48100FF7A80 /* iOSShareWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSShareWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSShareWatcherTests.swift; sourceTree = "<group>"; };
 		4D34A0241C7EF48100FF7A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequestTests.swift; sourceTree = "<group>"; };
 		4D934D381C8AAA8C00575399 /* iOSShareDataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSShareDataRequest.swift; sourceTree = "<group>"; };
 		4D934D3C1C8AAA8C00575399 /* ChartDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDataParser.swift; sourceTree = "<group>"; };
 		4D934D3E1C8AAA8C00575399 /* ChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				4D34A0221C7EF48100FF7A80 /* iOSShareWatcherTests.swift */,
+				4D42D2C61C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift */,
 				4D34A0241C7EF48100FF7A80 /* Info.plist */,
 			);
 			path = iOSShareWatcherTests;
@@ -428,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D34A0231C7EF48100FF7A80 /* iOSShareWatcherTests.swift in Sources */,
+				4D42D2C71C8EAFD300B84AE9 /* iOSShareDataRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

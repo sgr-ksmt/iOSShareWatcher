@@ -31,7 +31,7 @@ struct iOSShareDataRequest {
             .flatMap(decodeChartData)
     }
 
-    private static func getChartJS() -> Observable<String> {
+    static func getChartJS() -> Observable<String> {
         return Observable.create { observer in
             let request = Alamofire
                 .request(.GET, chartJSURL)
@@ -50,7 +50,7 @@ struct iOSShareDataRequest {
         }
     }
     
-    private static func parseChartData(code: String) -> Observable<Himotoki.AnyJSON> {
+    static func parseChartData(code: String) -> Observable<Himotoki.AnyJSON> {
         return Observable.create { observer in
             do {
                 let json = try ChartDataParser.parseElements(code)
@@ -63,7 +63,7 @@ struct iOSShareDataRequest {
         }
     }
     
-    private static func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
+    static func decodeChartData(json: Himotoki.AnyJSON) -> Observable<ChartData> {
         return Observable.create { observer in
             do {
                 let chartData: ChartData = try decodeValue(json)
@@ -82,7 +82,7 @@ struct iOSShareDataRequest {
             .flatMap(parseDate)
     }
     
-    private static func getHTML() -> Observable<String> {
+    static func getHTML() -> Observable<String> {
         return Observable.create { observer in
             let request = Alamofire
                 .request(.GET, appStoreURL)
@@ -101,7 +101,7 @@ struct iOSShareDataRequest {
         }
     }
     
-    private static func parseDate(code: String) -> Observable<NSDate> {
+    static func parseDate(code: String) -> Observable<NSDate> {
         return Observable.create { observer in
             do {
                 let date = try ChartDataParser.parseDate(code)
