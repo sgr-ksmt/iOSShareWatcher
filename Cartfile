@@ -16,8 +16,11 @@ github "realm/realm-cocoa" ~> 0.98.0
 github "yeahdongcn/UIColor-Hex-Swift" >= 1.9
 # regex
 github "cezheng/PySwiftyRegex" ~> 0.2.0
+# result
+github "antitypical/Result" ~> 1.0.2
 # Testing
 github "Quick/Quick" ~> 0.9.0
 github "Quick/Nimble" ~> 3.1.0
+github "yukiasai/Kagee" ~> 0.1.1
 # GCD
 github "duemunk/Async" ~> 1.7.0
